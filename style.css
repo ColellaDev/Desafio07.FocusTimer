@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+html {
+    --bg-color: rgb(255, 255, 255);
+    --txt-color: hsla(240, 6%, 21%, 1);
+
+    --bt-bg-color: hsla(240, 9%, 89%, 1);
+    --bt-txt-color: hsla(240, 6%, 21%, 1);
+
+    --bt-bg-color-hover: hsla(193.935, 98%, 31%, 1);
+    --bt-txt-color-hover: rgb(255, 255, 255);
+}
+
+html[data-theme='dark'] {
+    --bg-color: rgb(0, 0, 0);
+    --txt-color: rgb(255, 255, 255);
+
+    --bt-bg-color: #29292E;
+    --bt-txt-color: #FFFFFF;
+
+    --bt-bg-color-hover: #0A3442;
+    --bt-txt-color-hover: #00bfff;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20rem;
+    padding-top: 11rem;
+    margin-bottom: 9rem;
+}
+
+body {
+    background-color: var(--bg-color);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    color: var(--txt-color);
+    display: grid;  
+}
+
+.main {  
+     align-self:  center;
+     justify-self: center;
+     display: flex;
+     gap: 19rem;
+ }
+
+ .container {
+    width: 40rem;
+    margin-top: 3rem;
+ }
+
+.timer {
+    display: flex;
+    justify-content: center;
+}
+
+ .controls { 
+    display: flex;
+    margin-top: 4rem;
+    justify-content: center;
+    gap: 4rem;
+ }
+
+ .music {
+    width: 40rem;
+    height: 33rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+ }
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controls svg path {
+    fill: var(--bt-txt-color)
+}
+
+.music svg path:nth-child(1){
+    fill: var(--bt-bg-color)
+}
+
+.music svg path:nth-child(2){
+    fill: var(--bt-txt-color)
+}
+
+.hide {
+   display: none;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.slidecontainer {
+   margin-top: -4rem;
+}
+
+.slider {
+    width: 10rem;
+    -webkit-appearance: none;
+    width: 50%;
+    height: .5rem;
+    border-radius: 5rem;  
+    background: var(--bt-txt-color);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-bottom: 1.5rem;
+  } 
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%; 
+    background: var(--bt-txt-color);
+    cursor: pointer;
+  }
+
+
+
+
+
+
